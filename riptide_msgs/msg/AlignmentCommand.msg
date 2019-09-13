@@ -1,0 +1,2 @@
+string object
+float64 width_ratio
