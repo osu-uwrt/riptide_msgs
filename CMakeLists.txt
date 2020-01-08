@@ -17,7 +17,6 @@ add_message_files(
     ThrustStamped.msg
     Pwm.msg
     PwmStamped.msg
-    Imu.msg
     SwitchState.msg
     TaskAlignment.msg
     PoleData.msg
