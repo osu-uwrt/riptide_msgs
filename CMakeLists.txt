@@ -40,6 +40,7 @@ add_message_files(
     NetLoad.msg
     LinearCommand.msg
     Dvl.msg
+    ControllerEnable.msg
 )
 
 generate_messages(
