@@ -17,7 +17,6 @@ add_message_files(
     ThrustStamped.msg
     Pwm.msg
     PwmStamped.msg
-    Imu.msg
     SwitchState.msg
     TaskAlignment.msg
     PoleData.msg
@@ -41,6 +40,7 @@ add_message_files(
     NetLoad.msg
     LinearCommand.msg
     Dvl.msg
+    ControllerEnable.msg
 )
 
 generate_messages(
