@@ -7,7 +7,6 @@ find_package(catkin REQUIRED
     message_generation
     std_msgs
     geometry_msgs
-    darknet_ros_msgs
 )
 
 add_message_files(
@@ -46,8 +45,7 @@ add_message_files(
 generate_messages(
     DEPENDENCIES 
     std_msgs 
-    geometry_msgs 
-    darknet_ros_msgs
+    geometry_msgs
 
 )
 
