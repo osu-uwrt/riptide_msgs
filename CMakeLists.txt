@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.0.2)
 project(riptide_msgs)
 add_compile_options(-std=c++11)
 
@@ -7,7 +7,6 @@ find_package(catkin REQUIRED
     message_generation
     std_msgs
     geometry_msgs
-    darknet_ros_msgs
 )
 
 add_message_files(
@@ -46,8 +45,7 @@ add_message_files(
 generate_messages(
     DEPENDENCIES 
     std_msgs 
-    geometry_msgs 
-    darknet_ros_msgs
+    geometry_msgs
 
 )
 
