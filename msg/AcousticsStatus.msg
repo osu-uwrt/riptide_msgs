@@ -1,3 +1,3 @@
-float32 PFPADiff
-float32 PFSFDiff
-float32 Angle
+float32 pfpa_diff
+float32 pfsf_diff
+float32 angle

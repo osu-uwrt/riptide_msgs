@@ -1,58 +1,37 @@
-cmake_minimum_required(VERSION 3.0.2)
-project(riptide_msgs)
-add_compile_options(-std=c++11)
+cmake_minimum_required(VERSION 3.8)
+project(riptide_msgs2)
 
-find_package(catkin REQUIRED
-    COMPONENTS
-    message_generation
-    std_msgs
-    geometry_msgs
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+# find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+
+# Grab all message files 
+file(GLOB msg_sources RELATIVE ${PROJECT_SOURCE_DIR} msg/*.msg)
+#message("Grabbing messages ${msg_sources}")
+
+#generate messages
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_sources}
+  DEPENDENCIES geometry_msgs std_msgs sensor_msgs
 )
+ament_export_dependencies(rosidl_default_runtime)
 
-add_message_files(
-    FILES
-    Depth.msg
-    Thrust.msg
-    ThrustStamped.msg
-    Pwm.msg
-    PwmStamped.msg
-    SwitchState.msg
-    TaskAlignment.msg
-    PoleData.msg
-    BoundingBox.msg
-    ResetControls.msg
-    ControlStatus.msg
-    ControlStatusAngular.msg
-    ControlStatusLinear.msg
-    AlignmentCommand.msg
-    DepthCommand.msg
-    AttitudeCommand.msg
-    AcousticsStatus.msg
-    AcousticsCommand.msg
-    Pneumatics.msg
-    Constants.msg
-    TaskInfo.msg
-    Object.msg
-    MissionState.msg
-    StatusLight.msg
-    CalibrateAlignment.msg
-    NetLoad.msg
-    LinearCommand.msg
-    Dvl.msg
-    ControllerEnable.msg
-)
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  # the following line skips the linter which checks for copyrights
+  # uncomment the line when a copyright and license is not present in all source files
+  #set(ament_cmake_copyright_FOUND TRUE)
+  # the following line skips cpplint (only works in a git repo)
+  # uncomment the line when this package is not in a git repo
+  #set(ament_cmake_cpplint_FOUND TRUE)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
-generate_messages(
-    DEPENDENCIES 
-    std_msgs 
-    geometry_msgs
-
-)
-
-catkin_package(
-    CATKIN_DEPENDS 
-    message_runtime
-    
-)
-
-include_directories(${catkin_INCLUDE_DIRS})
+ament_package()

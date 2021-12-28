@@ -3,4 +3,4 @@ bool visible
 # Relative position in pixels
 geometry_msgs/Point relative_pos
 
-riptide_msgs/BoundingBox bbox
+riptide_msgs2/BoundingBox bbox

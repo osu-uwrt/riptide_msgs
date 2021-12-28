@@ -1,3 +1,3 @@
 int8 enabled
-int32 pingFrequency
-string fileName
+int32 ping_frequency
+string file_name
