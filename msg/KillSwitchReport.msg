@@ -1,0 +1,3 @@
+uint8 kill_switch_id
+bool switch_enabled
+bool switch_needs_update

@@ -1,0 +1,9 @@
+bool drop_1
+bool drop_2
+bool arm_torpedo
+bool disarm_torpedo
+bool fire_torpedo_1
+bool fire_torpedo_2
+bool open_grabber
+bool close_grabber
+bool reset_actuators

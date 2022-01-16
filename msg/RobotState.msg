@@ -1,0 +1,5 @@
+bool kill_switch_inserted
+bool aux_switch_inserted
+float32 robot_temperature
+float32 robot_pressure
+bool peltier_active
