@@ -7,4 +7,4 @@ float32 twelve_volt_voltage
 float32 five_volt_voltage
 float32 twelve_volt_current
 float32 five_volt_current
-float32 esc_current[8]
+float32[8] esc_current
