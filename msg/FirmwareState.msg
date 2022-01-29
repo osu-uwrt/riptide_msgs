@@ -1,7 +1,11 @@
+std_msgs/Header header
 bool depth_sensor_initialized
 bool actuator_connected
 uint32 actuator_faults
 int8 peltier_cooling_threshold
 uint32 copro_faults
 uint8 copro_memory_usage
-uint32 kill_switch_states
+uint32 kill_switches_enabled
+uint32 kill_switches_asserting_kill
+uint32 kill_switches_needs_update
+uint32 kill_switches_timed_out

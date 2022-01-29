@@ -1,3 +1,6 @@
+float32 NO_READING=-1
+
+std_msgs/Header header
 float32 port_voltage
 float32 stbd_voltage 
 float32 port_current
