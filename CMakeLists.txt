@@ -11,6 +11,7 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(trajectory_msgs REQUIRED)
 
 # Grab all message files 
 file(GLOB msg_sources RELATIVE ${PROJECT_SOURCE_DIR} msg/*.msg)
@@ -21,7 +22,7 @@ file(GLOB act_sources RELATIVE ${PROJECT_SOURCE_DIR} action/*.action)
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_sources}
   ${act_sources}
-  DEPENDENCIES geometry_msgs std_msgs sensor_msgs
+  DEPENDENCIES geometry_msgs std_msgs sensor_msgs trajectory_msgs
 )
 ament_export_dependencies(rosidl_default_runtime)
 
