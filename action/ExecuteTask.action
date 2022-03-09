@@ -1,0 +1,9 @@
+#goal definition
+string behaviortree_file
+---
+#result definition
+int8 returncode
+---
+#feedback
+string stdout
+string stderr
