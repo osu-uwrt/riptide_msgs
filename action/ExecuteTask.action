@@ -5,5 +5,5 @@ string behaviortree_file
 int8 returncode
 ---
 #feedback
-string stdout
-string stderr
+string stdout_data
+string stderr_data
