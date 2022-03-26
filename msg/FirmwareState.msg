@@ -1,4 +1,6 @@
 std_msgs/Header header
+uint8 version_major
+uint8 version_minor
 bool depth_sensor_initialized
 bool actuator_connected
 uint32 actuator_faults
