@@ -26,11 +26,9 @@ uint8 KILL_SWITCH_DEBUG=3
 # Message Definition
 # ========================================
 
-# Note: The header must be filled out properly!
-# If the time is not present, then the message will be rejected
-# The frame id should uniquely identify the code running. This prevents from accidental re-enabling
-# on kill from another node publishing as the same switch ID 
-std_msgs/Header header
+# The sender_id should uniquely identify the code running. This could be the node name because they should be unique
+# This prevents from accidental re-enabling on kill from another node publishing as the same switch ID 
+string sender_id
 
 # A switch ID defined above
 uint8 kill_switch_id
