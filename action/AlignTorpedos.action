@@ -1,5 +1,6 @@
 #request
-float32 distance #meters
+float32 currentdistance #meters
+float32 goaldistance #meters
 int64 timeoutms #milliseconds
 ---
 #result
