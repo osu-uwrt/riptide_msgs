@@ -15,12 +15,14 @@ find_package(trajectory_msgs REQUIRED)
 
 # Grab all message files 
 file(GLOB msg_sources RELATIVE ${PROJECT_SOURCE_DIR} msg/*.msg)
+file(GLOB srv_sources RELATIVE ${PROJECT_SOURCE_DIR} srv/*.srv)
 file(GLOB act_sources RELATIVE ${PROJECT_SOURCE_DIR} action/*.action)
 #message("Grabbing messages ${msg_sources}")
 
 #generate messages
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_sources}
+  ${srv_sources}
   ${act_sources}
   DEPENDENCIES geometry_msgs std_msgs sensor_msgs trajectory_msgs
 )
