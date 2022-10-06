@@ -1,0 +1,10 @@
+#request
+float32 currentdistanceplanar #meters
+float32 goalsearchdistanceplanar #meters
+float32 binsdepth
+int64 timeoutms #milliseconds
+---
+#result
+geometry_msgs/Vector3 coords
+---
+#feedback
