@@ -1,0 +1,6 @@
+#request
+uint8 torpedo_id #TorpedoID (1 or 2)
+---
+#result
+---
+#feedback

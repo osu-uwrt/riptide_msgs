@@ -1,0 +1,7 @@
+#request
+bool dropper_arm
+bool torpedo_arm
+---
+#result
+---
+#feedback
