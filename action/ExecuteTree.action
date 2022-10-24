@@ -1,0 +1,11 @@
+# goal
+string tree
+
+---
+# result
+bool error
+uint32 returncode
+
+---
+# feedback
+TreeStack stack
