@@ -1,7 +1,10 @@
 #request
-bool dropper_arm
-bool torpedo_arm
+bool arm_torpedos
+bool arm_droppers
 ---
 #result
 ---
 #feedback
+bool is_armed
+
+#only one can be armed at a time, lock the other out
