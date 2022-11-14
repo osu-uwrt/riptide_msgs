@@ -13,7 +13,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 
-# Grab all message files 
+# Grab all message/action/service files 
 file(GLOB msg_sources RELATIVE ${PROJECT_SOURCE_DIR} msg/*.msg)
 file(GLOB srv_sources RELATIVE ${PROJECT_SOURCE_DIR} srv/*.srv)
 file(GLOB act_sources RELATIVE ${PROJECT_SOURCE_DIR} action/*.action)
